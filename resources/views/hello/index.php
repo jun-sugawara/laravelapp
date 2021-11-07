@@ -8,6 +8,7 @@
 </head>
 <body>
   <h1>Index</h1>
-  <p>this is a sample page with php-template</p>
+  <p><?php echo $msg; ?></p>
+  <p>ID=<?php echo $id; ?></p>
 </body>
 </html>  
