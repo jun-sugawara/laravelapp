@@ -8,11 +8,18 @@
 </head>
   <body>
     <h1>Blade/Index</h1>
-    @if($msg != '')
-      <p>こんにちは{{$msg}}さん</p>
-    @else
-      <p>何か書いてください</p>
+    <p>&#064;forディレクティブの部分</p>
+    @foreach($data as $item)
+    @if($loop->first)
+    <p>※データ一覧</p>
+    <ul>
     @endif
+    <li>No,{{$loop->iteration}} . {{$item}}</li>
+    @if($loop->last)
+    </ul
+    ><p>ーーーーーーーここまで</p>
+    @endif
+    @endforeach
       <form method="POST" action="/hello">
       @csrf
         <input type="text" name="msg">
