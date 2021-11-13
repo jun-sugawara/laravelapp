@@ -1,4 +1,4 @@
-<html>
+<!-- <html>
 <head>
   <title>Hello/Index</title>
   <style>
@@ -20,12 +20,19 @@
       @endphp
       @endwhile
     </ol>
+</html> -->
+@extends('layouts.helloapp')
+@section('title', 'Index')
+@section('menubar')
+  @parent
+  インデックスページ
+@endsection
 
+@section('content')
+  <p>ここが本文のコンテンツです</p>
+  <p>必要なだけ記述できます</p>
+@endsection
 
-      <form method="POST" action="/hello">
-      @csrf
-        <input type="text" name="msg">
-        <input type="submit">
-      </form>  
-  </body>
-</html>
+@section('footer')
+copyright 2021 jun-sugawara
+@endsection
