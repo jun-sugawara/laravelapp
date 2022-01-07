@@ -2,7 +2,7 @@
 @section('title', 'Index')
 @section('menubar')
   @parent
-  インデックスページ
+  インデックス
 @endsection
 
 @section('content')
